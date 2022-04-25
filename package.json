@@ -1,0 +1,25 @@
+{
+  "name": "employer-profile-generator",
+  "version": "1.0.0",
+  "description": "generates a webpage that display's team's basic info for an employer.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/monlevey/Employer-Profile-Generator.git"
+  },
+  "author": "MonLevey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/monlevey/Employer-Profile-Generator/issues"
+  },
+  "homepage": "https://github.com/monlevey/Employer-Profile-Generator#readme",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  },
+  "dependencies": {
+    "inquirer": "^8.2.2"
+  }
+}
