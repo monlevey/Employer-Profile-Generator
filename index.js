@@ -46,10 +46,9 @@ function addMember() {
             roleInfo = "GitHub username";
         } else if (role === "Intern") {
             roleInfo = "school name";
-        } else if (role === "Manager") {
+        } else 
             roleInfo = "office phone number";
-        } else
-            roleInfo = "alternative employee role"
+       
         inquirer.prompt([{
             message: `Enter team member's ${roleInfo}`,
             name: "roleInfo"
@@ -158,17 +157,16 @@ function addHtml(member) {
         </div>`
         }
         else {
-            const officePhone = member.getOfficeNumber();
-            data = `<div class="col-6">
-            <div class="card mx-auto mb-3" style="width: 18rem">
-            <h5 class="card-header">${name}<br /><br />Manager</h5>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">ID: ${id}</li>
-                <li class="list-group-item">Email Address: ${email}</li>
-                <li class="list-group-item">Office Phone: ${officePhone}</li>
-            </ul>
-            </div>
-        </div>`
+                data = `<div class="col-6">
+                <div class="card mx-auto mb-3" style="width: 18rem">
+                <h5 class="card-header">${name}<br /><br />${role}</h5>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">ID: ${id}</li>
+                    <li class="list-group-item">Email Address: ${email}</li>
+                    
+                </ul>
+                </div>
+            </div>`
         }
         console.log("adding team member");
         fs.appendFile("./output/team.html", data, function (err) {
