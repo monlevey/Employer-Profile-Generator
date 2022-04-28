@@ -99,7 +99,7 @@ function startHtml() {
         <title>Team Profile</title>
     </head>
     <body>
-        <nav class="navbar navbar-dark bg-dark mb-5">
+        <nav class="navbar navbar-dark bg-info mb-5">
             <span class="navbar-brand mb-0 h1 w-100 text-center">Team Profile</span>
         </nav>
         <div class="container">
@@ -123,11 +123,11 @@ function addHtml(member) {
             const gitHub = member.getGithub();
             data = `<div class="col-6">
             <div class="card mx-auto mb-3" style="width: 18rem">
-            <h5 class="card-header">${name}<br /><br />Engineer</h5>
+            <h5 class="card-header bg-success text-white">${name}<br /><br />Engineer</h5>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: ${id}</li>
                 <li class="list-group-item">Email: <a href="mailto:${email}">${email}</a></li>
-                <li class="list-group-item">GitHub: <a href="https://github.com/${github}" target="_blank" rel="noopener noreferrer">${github}</a></li>
+                <li class="list-group-item">GitHub: <a href="https://github.com/${gitHub}" target="_blank" rel="noopener noreferrer">${gitHub}</a></li>
             </ul>
             </div>
         </div>`;
@@ -135,7 +135,7 @@ function addHtml(member) {
             const school = member.getSchool();
             data = `<div class="col-6">
             <div class="card mx-auto mb-3" style="width: 18rem">
-            <h5 class="card-header">${name}<br /><br />Intern</h5>
+            <h5 class="card-header bg-warning text-dark">${name}<br /><br />Intern</h5>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: ${id}</li>
                 <li class="list-group-item">Email: <a href="mailto:${email}">${email}</a></li>
@@ -147,7 +147,7 @@ function addHtml(member) {
             const officePhone = member.getOfficeNumber();
             data = `<div class="col-6">
             <div class="card mx-auto mb-3" style="width: 18rem">
-            <h5 class="card-header">${name}<br /><br />Manager</h5>
+            <h5 class="card-header bg-primary text-white">${name}<br /><br />Manager</h5>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: ${id}</li>
                 <li class="list-group-item">Email: <a href="mailto:${email}">${email}</a></li>
@@ -159,7 +159,7 @@ function addHtml(member) {
         else {
                 data = `<div class="col-6">
                 <div class="card mx-auto mb-3" style="width: 18rem">
-                <h5 class="card-header">${name}<br /><br />${role}</h5>
+                <h5 class="card-header bg-danger">${name}<br /><br />${role}</h5>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">ID: ${id}</li>
                     <li class="list-group-item">Email: <a href="mailto:${email}">${email}</a></li>
